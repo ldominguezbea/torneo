@@ -38,26 +38,39 @@ def partido():
         random2 = choice(equipos)
         gol1 = randint(0, 6)
         gol2 = randint(0, 6)
+        punt1 = 0
+        punt2 = 0
 
         if gol1 > gol2:
             gol1 = verde + gol1 + fin
             gol2 = rojo + gol2 + fin
+            punt1 = 3
+            punt2 = 0
         elif gol1 < gol2:
             gol2 = verde + gol2 + fin
             gol1 = rojo + gol1 + fin
+            punt1 = 0
+            punt2 = 3
         else:
             gol2 = amarillo + gol2 + fin
             gol1 = amarillo + gol1 + fin
+            punt1 = 0
+            punt2 = 0
         num += 1
+
+        for 0, 1, 2, 3, 4. 5, 6, 7 in partidos:
+
+
 
         while random1 == random2:
             random2 = choice(equipos)
+
         tupla = tuple()
         tupla = (num, ",", random1, ",", gol1, ",", random2, ",", gol2)
 
         partidos.append(tupla)
 
-    print(tabulate(partidos, headers = ["Nº de partido", "Local", "Goles", "Visitante", "Goles", "Diferencia de puntos", "Goles a favor", "Puntos"], tablefmt = "grid"))
+    print(tabulate(partidos, headers = ["Nº de partido", "Local", "Goles", "Visitante", "Goles", "Puntos", "Diferencia de puntos", "Goles a favor", "Puntos"], tablefmt = "grid"))
 
 
 
