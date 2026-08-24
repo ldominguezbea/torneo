@@ -1,11 +1,13 @@
 from random import *
 from tabulate import *
-from colorama import init, Fore, Style
+from colorama import *
+from archivos import *
 
 init (autoreset = True)
 def crear_equipo(): 
-    dicc = {}
     global dicc 
+    dicc = {}
+    
     cont = 0
     cant = 0
 
@@ -55,7 +57,7 @@ def estadisticas(local, visitante):
     visitante["DG"] = gol_visitante - gol_local
 
     if gol_local > gol_visitante:
-        local["PTOS"] =+= 3
+        local["PTOS"] += 3
         local["PG"] += 1
         print(local, Fore.GREEN +"ganó el partido")
         visitante["PP"] += 1
@@ -70,11 +72,11 @@ def estadisticas(local, visitante):
         visitante["PE"] += 1
         local["PE"] = 1
         print(Fore.YELLOW + "Empate")
-    guardar(equipos)
+    guardar(dicc, "equipos.json")
 
-def fixture(equipos):
+def fixture(dicc):
     campeon =  {
-                "EQUIPO": equipo,
+                "EQUIPO": "equipo",
                 "PJ": 0,
                 "PG": 0,
                 "PE": 0,
@@ -84,11 +86,10 @@ def fixture(equipos):
                 "DG": 0,
                 "PTS": 0,
             }
-        )
-    cant_equipos = len(equipos)
+    cant_equipos = len(dicc)
     for i in range():
         for x in range(i +1, cant_equipos):
-            estadisticas(equipo[i], equipo[x])
+            estadisticas(dicc[i], dicc[x])
     for clave, valor in dicc.items():
         if dicc[clave]["PJ"]["PG"] > campeon["EQUIPO"]["PJ"]["PG"]:
             campeon[clave]
