@@ -55,7 +55,7 @@ def estadisticas(local, visitante):
         local["PTOS"] = 1
         visitante["PE"] += 1
         local["PE"] = 1
-
+    guardar(equipos)
 
 def fixture(equipos):
     cant_equipos = len(equipos)
