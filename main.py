@@ -1,9 +1,6 @@
 from equipos import *
-from tabulate import *
-
 def main():
     print("===TORNEO===")
     crear_equipo()
+    fixture(equipos)
 main()
-
-partidos = partido()
