@@ -1,5 +1,5 @@
 from colorama import Fore
-from equipos import (cargar_equipos,crear_tabla_inicial,simular_partido,actualizar_estadisticas,ordenar_posiciones,mostrar_tabla_final,)
+from equipos import (cargar_equipos, crear_tabla_inicial, simular_partido,actualizar_estadisticas,ordenar_posiciones,mostrar_tabla_final,)
 def main():
     print("===TORNEO===")
     nombres = cargar_equipos()
